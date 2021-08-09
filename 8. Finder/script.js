@@ -22,7 +22,7 @@ function searchMeal (e) {
             .then(res => res.json())
             .then(data => {  
                 resultHeading.innerHTML = `<h2>Search results for '${term}'</h2>`
-
+                
                 if(data.meals === null) {
                     resultHeading.innerHTML = '<p>There are no search results. Try again!</p>'
                 } else {
@@ -43,6 +43,7 @@ function searchMeal (e) {
         alert('Please enter a search term');
     }
 }
+
 
 // Fetch meal by ID
 function getMealById(mealID){
@@ -72,7 +73,7 @@ function getRandomMeal(){
 }
 
 
-// Add meal to DOM
+// Add meal ingredients to DOM
 function addMealToDOM(meal) {
     const ingredients = [];
 
